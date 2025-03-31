@@ -11,21 +11,12 @@ import { FiSearch } from "react-icons/fi";
 import Logo from "../../../assets/logo.png";
 
 const Header = () => {
-  const [aboutUsOpen, setAboutUsOpen] = useState(false);
-  const [solutionsOpen, setSolutionsOpen] = useState(false);
-  const [careersOpen, setCareersOpen] = useState(false);
-  const [resourcesOpen, setResourcesOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   // Reusable style for navigation links
   const navLinkStyle =
-    "px-4 py-2 h-14 text-[14px] flex items-center justify-center rounded-full hover:bg-blue-100 hover:text-blue-700 right-0 transition duration-300 cursor-pointer hover:text-white hover:bg-blue-900 hover:h-14 hover:flex hover:items-center hover:justify-between";
-
-  const dropdownStyle =
-    "absolute left-0 mt-2 py-2 w-48 bg-gray-100 rounded-md shadow-xl z-10";
-
-  const dropdownItemStyle = "block px-4 py-2 text-gray-800 hover:bg-blue-100";
+    "px-4 py-2 h-14 text-[14px] flex items-center justify-center rounded-full transition duration-300 cursor-pointer hover:bg-blue-900 hover:text-white";
 
   // Check screen size and set mobile view
   useEffect(() => {
@@ -43,88 +34,15 @@ const Header = () => {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  // Mobile Menu Dropdown Component
-  const MobileDropdown = ({ isOpen, items, onClose }) => {
-    if (!isOpen) return null;
-
-    return (
-      <div className={dropdownStyle}>
-        {items.map((item, index) => (
-          <Link
-            key={index}
-            to={item.path || "#"}
-            className={dropdownItemStyle}
-            onClick={onClose}
-          >
-            {item.label}
-          </Link>
-        ))}
-      </div>
-    );
-  };
-
   // Navigation Items
   const navItems = [
-    {
-      label: "Home",
-      dropdown: false,
-      active: true,
-      path: "/",
-    },
-    {
-      label: "About Us",
-      dropdown: true,
-      state: aboutUsOpen,
-      setState: setAboutUsOpen,
-      path: "/about",
-      items: [
-        { label: "Our Team", path: "/about/team" },
-        { label: "Our History", path: "/about/history" },
-      ],
-    },
-    {
-      label: "Our Solutions",
-      dropdown: true,
-      state: solutionsOpen,
-      setState: setSolutionsOpen,
-      path: "/solutions",
-      items: [
-        { label: "Solution 1", path: "/solutions/solution-1" },
-        { label: "Solution 2", path: "/solutions/solution-2" },
-      ],
-    },
-    {
-      label: "Careers",
-      dropdown: true,
-      state: careersOpen,
-      setState: setCareersOpen,
-      path: "/careers",
-      items: [
-        { label: "Open Positions", path: "/careers/positions" },
-        { label: "Benefits", path: "/careers/benefits" },
-      ],
-    },
-    {
-      label: "Community First Initiatives",
-      dropdown: false,
-      path: "/community",
-    },
-    {
-      label: "Resources",
-      dropdown: true,
-      state: resourcesOpen,
-      setState: setResourcesOpen,
-      path: "/resources",
-      items: [
-        { label: "Blog", path: "/resources/blog" },
-        { label: "Downloads", path: "/resources/downloads" },
-      ],
-    },
-    {
-      label: "Contact Us",
-      dropdown: false,
-      path: "/contact",
-    },
+    { label: "Home", path: "/" },
+    { label: "About Us", path: "/about" },
+    { label: "Our Solutions", path: "/solutions" },
+    { label: "Careers", path: "/careers" },
+    { label: "Community First Initiatives", path: "/community" },
+    { label: "Resources", path: "/resources" },
+    { label: "Contact Us", path: "/contact" },
   ];
 
   // Render Navigation Items
@@ -132,48 +50,19 @@ const Header = () => {
     return navItems.map((item, index) => (
       <li
         key={index}
-        className={`
-          ${navLinkStyle} 
-          ${item.active ? "bg-blue-900 text-white" : ""} 
-          ${mobile ? "w-full text-center" : ""} 
-          relative
-        `}
+        className={`${navLinkStyle} ${mobile ? "w-full text-center" : ""}`}
       >
-        {item.dropdown ? (
-          <div
-            className="w-full h-full flex items-center justify-center"
-            onClick={() => {
-              if (item.dropdown && item.setState) {
-                item.setState(!item.state);
-              }
-              if (mobile) {
-                setIsMobileMenuOpen(false);
-              }
-            }}
-          >
-            {item.label} {item.dropdown && "⌄"}
-          </div>
-        ) : (
-          <Link
-            to={item.path}
-            className="w-full h-full flex items-center justify-center"
-            onClick={() => {
-              if (mobile) {
-                setIsMobileMenuOpen(false);
-              }
-            }}
-          >
-            {item.label}
-          </Link>
-        )}
-
-        {item.dropdown && item.state && (
-          <MobileDropdown
-            isOpen={item.state}
-            items={item.items}
-            onClose={() => item.setState(false)}
-          />
-        )}
+        <Link
+          to={item.path}
+          className="w-full h-full flex items-center justify-center"
+          onClick={() => {
+            if (mobile) {
+              setIsMobileMenuOpen(false);
+            }
+          }}
+        >
+          {item.label}
+        </Link>
       </li>
     ));
   };

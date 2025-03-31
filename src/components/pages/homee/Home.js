@@ -1,19 +1,21 @@
 import React from "react";
-import HomeFirst from "./Homefirst";
-import HomeSecond from "./Homesecond";
 import Header from "../../common/header/Header";
 import Footer from "../../common/footer/Footer";
-import HomeThird from "./Homethird";
-import HomeFour from "./Homefour";
+import Cetification from "./certification/Certifications";
+import HomeBg from "./Homebg/HomeBg";
+import WhatWeOffer from "./whatweoffer/WhatWeOffer";
+import ArchTech from "./archtech/ArchTech";
+import AchiveOptimized from "./achiveoptimze/AchiveOptimized";
 
 const Home = () => {
   return (
     <>
       <Header />
-      <HomeFirst />
-      <HomeSecond />
-      <HomeThird />
-      <HomeFour />
+      <HomeBg />
+      <AchiveOptimized />
+      <WhatWeOffer />
+      <ArchTech />
+      <Cetification />
       <Footer />
     </>
   );
