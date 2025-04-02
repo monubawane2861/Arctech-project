@@ -8,10 +8,10 @@ const WorkforceSolutions = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Left side with text content */}
           <div className="w-full md:w-1/2 mb-8 md:mb-0 md:pr-8">
-            <h2 className="text-3xl font-bold text-blue-800 mb-2">
+            <h2 className="text-3xl font-bold text-blue-900 mb-2">
               Workforce Solutions
             </h2>
-            <div className="w-24 h-1 bg-blue-800 mb-6"></div>
+            <div className="w-24 h-1 bg-red-800 mb-6"></div>
 
             <div className="space-y-6">
               <p className="text-black">
@@ -39,7 +39,7 @@ const WorkforceSolutions = () => {
 
             <div className="mt-8 text-center md:text-left">
               <p className="mb-4">To find out how we can help you</p>
-              <button className="bg-blue-800 text-white py-3 px-8 rounded-full font-semibold hover:bg-white hover:text-blue-900 hover:outline hover:outline-blue-900 hover:outline-2 transition-colors">
+              <button className="bg-blue-900 text-white py-3 px-8 rounded-full font-semibold hover:bg-white hover:text-blue-900 hover:outline hover:outline-blue-900 hover:outline-2 transition-colors">
                 CONTACT US TODAY!
               </button>
             </div>

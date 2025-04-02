@@ -33,7 +33,9 @@ const InnovativeSolutions = () => {
   ];
 
   return (
-    <div className="w-full">
+    <div className=" w-full ">
+      {" "}
+      {/* Added z-10 to keep it above other elements */}
       {/* Top section - White background */}
       <div className="bg-white py-8 text-center">
         <h2 className="text-3xl font-bold text-blue-800 mb-2">
@@ -44,23 +46,24 @@ const InnovativeSolutions = () => {
           Enhance Your Business with Artech
         </p>
       </div>
-
       {/* Blue background section */}
       <div className="bg-blue-800 py-6 text-center">
         <h3 className="text-2xl font-semibold text-white">
           Expertise Across Professional Verticals
         </h3>
       </div>
-
       {/* Lists section */}
       <div className="py-8 px-4 md:px-12">
         <div className="flex flex-wrap justify-center">
           {expertiseAreas.map((column, index) => (
-            <div key={index} className="w-full md:w-1/4 mb-6 md:mb-0">
+            <div key={index} className="w-full md:w-1/4 mb-6 sm:mb-14">
               <ul className="space-y-2">
                 {column.map((item, itemIndex) => (
-                  <li key={itemIndex} className="flex items-start">
-                    <span className="text-black mr-2">◦</span>
+                  <li
+                    key={itemIndex}
+                    className="flex items-start font-semibold text-gray-700"
+                  >
+                    <span className="font-semibold text-gray-700 mr-2">◦</span>
                     <span>{item}</span>
                   </li>
                 ))}

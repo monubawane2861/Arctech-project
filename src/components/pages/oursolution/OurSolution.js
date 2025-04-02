@@ -20,7 +20,6 @@ const OurSolution = () => {
       <ServiceCardsGrid />
       <ManagedServicesSection />
       <ThreeStep />
-
       <ServiceCategories />
       <PreferredChoice />
       <Footer />

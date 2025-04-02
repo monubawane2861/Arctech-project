@@ -1,12 +1,13 @@
 import React from "react";
 import Greateplace from "../../../../assets/grate-place.png";
 import work from "../../../../assets/about2.png";
+
 const GreatPlaceSection = () => {
   return (
-    <div className="w-full bg-blue-900 py-3">
+    <div className="w-full bg-blue-900 py-8">
       <div className="max-w-6xl mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center">
-        {/* Left Side - Image */}
-        <div className="md:w-1/2 mb-8 md:mb-0">
+        {/* Left Side - Image (Hidden on small devices) */}
+        <div className="hidden md:block md:w-1/2 mb-8 md:mb-0">
           <div className="relative">
             <div>
               <img
@@ -22,9 +23,10 @@ const GreatPlaceSection = () => {
         <div className="md:w-1/2 md:pl-12 mb-12">
           {/* Certification Badges - Top Right */}
           <div className="flex justify-end mb-2">
-            <div className="flex ">
+            <div className="flex">
               <div className="w-[70%]">
-                <img src={work} alt="" />
+                <img src={work} alt="Certification Badge" />{" "}
+                {/* Added alt text */}
               </div>
             </div>
           </div>
@@ -47,7 +49,7 @@ const GreatPlaceSection = () => {
 
           {/* Button */}
           <div className="flex justify-center">
-            <button className="bg-white text-blue-800 px-14 py-1 rounded-full font-medium hover:bg-blue-900 hover:border transition duration-300 hover:border-white hover:text-white">
+            <button className="bg-white text-blue-800 px-8 py-2 rounded-full font-medium hover:bg-blue-900 hover:border transition duration-300 hover:border-white hover:text-white">
               Know More
             </button>
           </div>

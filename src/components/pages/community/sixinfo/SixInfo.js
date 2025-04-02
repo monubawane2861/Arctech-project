@@ -97,28 +97,30 @@ const SixInfo = () => {
     <>
       {/* Yale School of Medicine Section */}
       <section className="bg-white max-w-6xl mx-auto py-8">
-        <div className="flex flex-col md:flex-row items-center">
+        <div className="flex flex-col md:flex-row items-center gap-8">
           {/* Image Section */}
-          <div className="w-[80%] md:w-1/2 flex justify-center">
-            <div className="w-96 h-96 md:w-[30rem] md:h-[30rem]">
+          <div className="w-full md:w-1/2 flex justify-center">
+            <div className="w-full max-w-md">
+              {" "}
+              {/* Adjusted for responsiveness */}
               <img
                 src={sixInfoData.image}
                 alt={sixInfoData.alt}
-                className="w-[120%] h-[80%] mt-8"
+                className="w-full h-auto object-cover rounded-lg" // Make image responsive
               />
             </div>
           </div>
 
           {/* Text Section */}
-          <div className="w-full md:w-1/2 mt-8 md:mt-0 md:pl-12">
-            <h2 className="text-3xl font-semibold text-blue-900">
+          <div className="w-full md:w-1/2">
+            <h2 className="text-3xl font-semibold text-blue-900 p-4  mb-2">
               {sixInfoData.title}
             </h2>
-            <div className="w-12 h-1 bg-yellow-500 mt-2 mb-4"></div>
+            <div className="w-12 h-1 bg-yellow-500 mt-2 mb-4 "></div>
             {sixInfoData.paragraphs.map((paragraph, index) => (
               <p
                 key={index}
-                className="text-[15px] mb-4 font-[500] text-justify"
+                className="text-base mb-4 p-4 font-normal text-gray-700 text-justify"
               >
                 {paragraph}
               </p>
@@ -129,28 +131,30 @@ const SixInfo = () => {
 
       {/* Hackensack University Medical Center Section */}
       <section className="bg-gray-50 max-w-6xl mx-auto py-8">
-        <div className="flex flex-col md:flex-row-reverse items-center">
+        <div className="flex flex-col md:flex-row-reverse items-center gap-8">
           {/* Image Section */}
-          <div className="w-[80%] md:w-1/2 flex justify-center">
-            <div className="w-96 h-96 md:w-[30rem] md:h-[30rem]">
+          <div className="w-full md:w-1/2 flex justify-center">
+            <div className="w-full max-w-md">
+              {" "}
+              {/* Adjusted for responsiveness */}
               <img
                 src={hackensackData.image}
                 alt={hackensackData.alt}
-                className="w-[120%] h-[80%] mt-8"
+                className="w-full h-auto object-cover rounded-lg" // Make image responsive
               />
             </div>
           </div>
 
           {/* Text Section */}
-          <div className="w-full md:w-1/2 mt-8 md:mt-0 md:pr-12">
-            <h2 className="text-3xl font-semibold text-blue-900">
+          <div className="w-full md:w-1/2">
+            <h2 className="text-3xl font-semibold text-blue-900 mb-2 p-4 ">
               {hackensackData.title}
             </h2>
             <div className="w-12 h-1 bg-yellow-500 mt-2 mb-4"></div>
             {hackensackData.paragraphs.map((paragraph, index) => (
               <p
                 key={index}
-                className="text-[15px] mb-4 font-[500] text-justify"
+                className="text-base mb-4 font-normal text-gray-700 text-justify p-4 "
               >
                 {paragraph}
               </p>
@@ -161,28 +165,30 @@ const SixInfo = () => {
 
       {/* Ekal Vidyalaya Section */}
       <section className="bg-white max-w-6xl mx-auto py-8">
-        <div className="flex flex-col md:flex-row items-center">
+        <div className="flex flex-col md:flex-row items-center gap-8">
           {/* Image Section */}
-          <div className="w-[80%] md:w-1/2 flex justify-center">
-            <div className="w-96 h-96 md:w-[30rem] md:h-[30rem]">
+          <div className="w-full md:w-1/2 flex justify-center">
+            <div className="w-full max-w-md">
+              {" "}
+              {/* Adjusted for responsiveness */}
               <img
                 src={ekalVidyalayaData.image}
                 alt={ekalVidyalayaData.alt}
-                className="w-[120%] h-[80%] mt-8"
+                className="w-full h-auto object-cover rounded-lg" // Make image responsive
               />
             </div>
           </div>
 
           {/* Text Section */}
-          <div className="w-full md:w-1/2 mt-8 md:mt-0 md:pl-12">
-            <h2 className="text-3xl font-semibold text-blue-900">
+          <div className="w-full md:w-1/2">
+            <h2 className="text-3xl font-semibold text-blue-900 mb-2 p-4 ">
               {ekalVidyalayaData.title}
             </h2>
             <div className="w-12 h-1 bg-yellow-500 mt-2 mb-4"></div>
             {ekalVidyalayaData.paragraphs.map((paragraph, index) => (
               <p
                 key={index}
-                className="text-[15px] mb-4 font-[500] text-justify"
+                className="text-base mb-4 font-normal text-gray-700 text-justify p-4 "
               >
                 {paragraph}
               </p>
@@ -193,28 +199,30 @@ const SixInfo = () => {
 
       {/* The Artech-Dalmia Center for IT Section */}
       <section className="bg-gray-50 max-w-6xl mx-auto py-8">
-        <div className="flex flex-col md:flex-row-reverse items-center">
+        <div className="flex flex-col md:flex-row-reverse items-center gap-8">
           {/* Image Section */}
-          <div className="w-[80%] md:w-1/2 flex justify-center">
-            <div className="w-96 h-96 md:w-[30rem] md:h-[30rem]">
+          <div className="w-full md:w-1/2 flex justify-center">
+            <div className="w-full max-w-md">
+              {" "}
+              {/* Adjusted for responsiveness */}
               <img
                 src={dalmiaData.image}
                 alt={dalmiaData.alt}
-                className="w-[120%] h-[80%] mt-8"
+                className="w-full h-auto " // Make image responsive
               />
             </div>
           </div>
 
           {/* Text Section */}
-          <div className="w-full md:w-1/2 mt-8 md:mt-0 md:pr-12">
-            <h2 className="text-3xl font-semibold text-blue-900">
+          <div className="w-full md:w-1/2">
+            <h2 className="text-3xl font-semibold text-blue-900 mb-2 p-4 ">
               {dalmiaData.title}
             </h2>
             <div className="w-12 h-1 bg-yellow-500 mt-2 mb-4"></div>
             {dalmiaData.paragraphs.map((paragraph, index) => (
               <p
                 key={index}
-                className="text-[15px] mb-4 font-[500] text-justify"
+                className="text-base mb-4 font-normal text-gray-700 text-justify p-4 "
               >
                 {paragraph}
               </p>
@@ -235,7 +243,7 @@ const SixInfo = () => {
         {/* Intro Text */}
         <div className="mb-10 text-gray-700">
           {communityFourData.introText.map((text, index) => (
-            <p key={index} className="mb-4 text-justify font-[500]">
+            <p key={index} className="mb-4 text-justify font-normal">
               {text}
             </p>
           ))}
@@ -249,20 +257,24 @@ const SixInfo = () => {
               section.imageFirst ? "lg:flex-row-reverse" : ""
             }`}
           >
-            <div className="lg:w-1/2">
+            <div className="lg:w-1/2 w-full">
+              {" "}
+              {/* Make image container responsive */}
               <div>
                 <img
                   src={section.image}
                   alt={section.alt}
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto object-cover" // Make image responsive
                 />
               </div>
             </div>
-            <div className="lg:w-1/2">
+            <div className="lg:w-1/2 w-full">
+              {" "}
+              {/* Make text container responsive */}
               <h2 className="text-2xl font-semibold text-blue-800 mb-4 border-b-2 border-yellow-400 inline-block pb-1">
                 {section.title}
               </h2>
-              <p className="text-gray-700 text-justify font-[500]">
+              <p className="text-gray-700 text-justify font-normal">
                 {section.text}
               </p>
             </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "../../../../assets/manageser.png";
+import Image from "../../../../assets/manageser.png"; // Consider optimizing image loading
 
 const ManagedServicesSection = () => {
   return (
@@ -14,6 +14,7 @@ const ManagedServicesSection = () => {
                   src={Image}
                   alt="Business professionals collaborating"
                   className="w-full h-full object-cover"
+                  loading="lazy" // Add lazy loading for performance
                 />
               </div>
             </div>
@@ -46,9 +47,17 @@ const ManagedServicesSection = () => {
               </p>
             </div>
 
-            <div className="mt-8">
-              <p className="mb-4">To find out how we can help you</p>
-              <button className="bg-white text-blue-800 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+            {/* Centered Text and Button */}
+            <div className="mt-8 flex flex-col items-center">
+              <p className="mb-4 font-semibold text-center">
+                To find out how we can help you
+              </p>
+              <button
+                className="bg-white text-blue-800 px-10 py-2 rounded-full 
+                    transition duration-300
+                    hover:bg-blue-900 hover:text-white hover:border hover:border-white
+                     "
+              >
                 CONTACT US TODAY!
               </button>
             </div>
